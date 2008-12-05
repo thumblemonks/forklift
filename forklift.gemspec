@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = "forklift"
-  s.version  = "0.1.0"
+  s.version  = "0.1.1"
   s.date     = "2008-12-05"
   s.summary  = "IT'S FORKLIFT DUMMY"
   s.email    = %w[gus@gusg.us gabriel.gironda@gmail.com]
@@ -18,8 +18,7 @@ Gem::Specification.new do |s|
     MIT-LICENSE
     README.markdown
     Rakefile
-    init.rb
-    install.rb
+    forklift.gemspec
     lib/forklift.rb
     rails/context_extensions.rb
     rails/fixture_loading_callbacks.rb
