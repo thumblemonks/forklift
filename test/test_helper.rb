@@ -1,7 +1,7 @@
 $: << File.dirname(__FILE__) + '/../lib'
 require 'rubygems'
 require 'active_record'
-require 'init'
+require 'forklift'
 require 'test/unit'
 require 'mocha'
 require 'ruby-debug'
