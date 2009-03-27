@@ -1,11 +1,9 @@
-require 'active_record/fixtures'
-
 module Thumblemonks
   module Forklift
     module FixtureLoadingCallbacks
       
       def self.included(klass)
-        klass.class_eval do 
+        klass.instance_eval do 
           class_inheritable_hash :callbacks
           self.callbacks = {}
           alias_method_chain :setup_fixtures, :callback_invocation
@@ -41,4 +39,4 @@ module Thumblemonks
   end     # Forklift
 end       # Thumblemonks
 
-Test::Unit::TestCase.instance_eval { include Thumblemonks::Forklift::FixtureLoadingCallbacks }
+ActiveSupport::TestCase.instance_eval { include Thumblemonks::Forklift::FixtureLoadingCallbacks }

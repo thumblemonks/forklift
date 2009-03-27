@@ -14,4 +14,4 @@ module Thumblemonks
   end   # Forklift
 end     # Thumblemonks
 
-Thoughtbot::Shoulda::Context.instance_eval { include Thumblemonks::Forklift::RailsContextExtensions }
+Shoulda::Context.instance_eval { include Thumblemonks::Forklift::RailsContextExtensions }

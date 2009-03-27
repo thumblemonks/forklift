@@ -3,9 +3,7 @@ require 'factory_girl'
 
 module Thumblemonks
   module Forklift
-    module ContextExtensions
-      
-      
+    module ContextExtensions      
       def depot(&block)
         captured_instance_vars, depot_ran = nil, false
         setup do 
@@ -13,10 +11,9 @@ module Thumblemonks
           captured_instance_vars, depot_ran = run_depot_and_capture_vars(block), true
         end
       end
-      
     end # ContextExtensions
-    module TestUnitTestCaseExtensions
 
+    module TestUnitTestCaseExtensions
     private
     
       def inject_instance_vars(var_hash)
@@ -38,4 +35,4 @@ module Thumblemonks
 end
 
 Test::Unit::TestCase.instance_eval { include Thumblemonks::Forklift::TestUnitTestCaseExtensions }
-Thoughtbot::Shoulda::Context.instance_eval { include Thumblemonks::Forklift::ContextExtensions }
+Shoulda::Context.instance_eval { include Thumblemonks::Forklift::ContextExtensions }

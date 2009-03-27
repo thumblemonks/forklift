@@ -1,7 +1,12 @@
 require File.dirname(__FILE__) + '/../test_helper'
+
+RAILS_ROOT = File.dirname(__FILE__)
+require 'action_controller'
+require 'test_help'
+
 require File.dirname(__FILE__) + '/../../rails/init'
 
-class FixtureTransactionsTest < Test::Unit::TestCase
+class FixtureTransactionsTest < ActiveSupport::TestCase
   self.use_transactional_fixtures = true
 
   def setup_fixtures_with_a_stubbed_configuration
