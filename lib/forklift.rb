@@ -3,7 +3,7 @@ require 'factory_girl'
 
 module Thumblemonks
   module Forklift
-    module ContextExtensions      
+    module ContextExtensions
       def depot(&block)
         captured_instance_vars, depot_ran = nil, false
         setup do 
@@ -14,8 +14,8 @@ module Thumblemonks
     end # ContextExtensions
 
     module TestUnitTestCaseExtensions
-    private
-    
+    # private
+    # 
       def inject_instance_vars(var_hash)
         var_hash.each { |var_name, var_value| instance_variable_set(var_name, var_value) }
       end
